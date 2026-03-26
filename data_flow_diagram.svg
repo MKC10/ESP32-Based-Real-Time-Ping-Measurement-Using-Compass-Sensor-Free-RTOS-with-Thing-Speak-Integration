@@ -1,0 +1,98 @@
+<svg width="100%" viewBox="0 0 680 600" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+<style>
+.t { font-family: sans-serif; font-size: 14px; fill: #3d3d3a; }
+.ts { font-family: sans-serif; font-size: 12px; fill: #73726c; }
+.th { font-family: sans-serif; font-size: 14px; font-weight: 500; fill: #3d3d3a; }
+.arr { stroke: #73726c; stroke-width: 1.5; fill: none; }
+.c-blue rect { fill: #E6F1FB; stroke: #378ADD; }
+.c-blue text { fill: #0C447C; }
+.c-teal rect { fill: #E1F5EE; stroke: #1D9E75; }
+.c-teal text { fill: #085041; }
+.c-amber rect { fill: #FAEEDA; stroke: #BA7517; }
+.c-amber text { fill: #633806; }
+.c-coral rect { fill: #FAECE7; stroke: #D85A30; }
+.c-coral text { fill: #712B13; }
+.c-purple rect { fill: #EEEDFE; stroke: #534AB7; }
+.c-purple text { fill: #3C3489; }
+</style>
+</defs>
+
+<!-- Title -->
+<text class="th" x="340" y="30" text-anchor="middle">Real-Time Data Flow</text>
+
+<!-- Top Row: Sources -->
+<g class="c-blue">
+<rect x="60" y="70" width="160" height="60" rx="8" stroke-width="0.5"/>
+<text class="th" x="140" y="95" text-anchor="middle">Network Ping</text>
+<text class="ts" x="140" y="115" text-anchor="middle">google.com RTT</text>
+</g>
+
+<g class="c-teal">
+<rect x="460" y="70" width="160" height="60" rx="8" stroke-width="0.5"/>
+<text class="th" x="540" y="95" text-anchor="middle">QMC5883L</text>
+<text class="ts" x="540" y="115" text-anchor="middle">X, Y, Z readings</text>
+</g>
+
+<!-- Middle: Tasks -->
+<g class="c-blue">
+<rect x="60" y="180" width="160" height="60" rx="8" stroke-width="0.5"/>
+<text class="th" x="140" y="205" text-anchor="middle">pingTask</text>
+<text class="ts" x="140" y="225" text-anchor="middle">Every 3s</text>
+</g>
+
+<g class="c-teal">
+<rect x="460" y="180" width="160" height="60" rx="8" stroke-width="0.5"/>
+<text class="th" x="540" y="205" text-anchor="middle">CompTask</text>
+<text class="ts" x="540" y="225" text-anchor="middle">Every 3s</text>
+</g>
+
+<!-- Semaphore Lock -->
+<g class="c-coral">
+<rect x="260" y="300" width="160" height="60" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="325" text-anchor="middle">Semaphore Lock</text>
+<text class="ts" x="340" y="345" text-anchor="middle">xSemaphoreTake</text>
+</g>
+
+<!-- Shared Variables -->
+<g class="c-purple">
+<rect x="60" y="420" width="160" height="80" rx="8" stroke-width="0.5"/>
+<text class="th" x="140" y="450" text-anchor="middle">avg_time_ms</text>
+<text class="ts" x="140" y="470" text-anchor="middle">Ping latency</text>
+<text class="ts" x="140" y="485" text-anchor="middle">(shared)</text>
+</g>
+
+<g class="c-purple">
+<rect x="460" y="420" width="160" height="80" rx="8" stroke-width="0.5"/>
+<text class="th" x="540" y="445" text-anchor="middle">CompassData</text>
+<text class="ts" x="540" y="465" text-anchor="middle">x, y, z fields</text>
+<text class="ts" x="540" y="485" text-anchor="middle">(shared struct)</text>
+</g>
+
+<!-- ThingSpeak Task -->
+<g class="c-amber">
+<rect x="240" y="540" width="200" height="50" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="565" text-anchor="middle">ThingSpeak Upload</text>
+<text class="ts" x="340" y="580" text-anchor="middle">Every 30 seconds</text>
+</g>
+
+<!-- Arrows -->
+<line x1="140" y1="130" x2="140" y2="178" class="arr" marker-end="url(#arrow)"/>
+<line x1="540" y1="130" x2="540" y2="178" class="arr" marker-end="url(#arrow)"/>
+
+<line x1="140" y1="240" x2="270" y2="298" class="arr" marker-end="url(#arrow)"/>
+<line x1="540" y1="240" x2="410" y2="298" class="arr" marker-end="url(#arrow)"/>
+
+<line x1="300" y1="360" x2="180" y2="418" class="arr" marker-end="url(#arrow)"/>
+<line x1="380" y1="360" x2="500" y2="418" class="arr" marker-end="url(#arrow)"/>
+
+<line x1="140" y1="500" x2="290" y2="538" class="arr" marker-end="url(#arrow)"/>
+<line x1="540" y1="500" x2="390" y2="538" class="arr" marker-end="url(#arrow)"/>
+
+<!-- Labels -->
+<text class="ts" x="340" y="380" text-anchor="middle">xSemaphoreGive (unlock)</text>
+
+</svg>

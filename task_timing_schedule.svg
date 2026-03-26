@@ -1,0 +1,94 @@
+<svg width="100%" viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>
+.t { font-family: sans-serif; font-size: 14px; fill: #3d3d3a; }
+.ts { font-family: sans-serif; font-size: 12px; fill: #73726c; }
+.th { font-family: sans-serif; font-size: 14px; font-weight: 500; fill: #3d3d3a; }
+.c-blue rect { fill: #E6F1FB; stroke: #378ADD; }
+.c-teal rect { fill: #E1F5EE; stroke: #1D9E75; }
+.c-amber rect { fill: #FAEEDA; stroke: #BA7517; }
+.c-coral rect { fill: #FAECE7; stroke: #D85A30; }
+.leader { stroke: #73726c; stroke-width: 0.5; stroke-dasharray: 2 2; fill: none; }
+</style>
+</defs>
+
+<!-- Title -->
+<text class="th" x="340" y="30" text-anchor="middle">Task Execution Timeline (30 second window)</text>
+
+<!-- Time axis -->
+<line x1="60" y1="380" x2="620" y2="380" stroke="#73726c" stroke-width="1"/>
+<text class="ts" x="60" y="400" text-anchor="middle">0s</text>
+<text class="ts" x="200" y="400" text-anchor="middle">10s</text>
+<text class="ts" x="340" y="400" text-anchor="middle">20s</text>
+<text class="ts" x="480" y="400" text-anchor="middle">30s</text>
+<text class="ts" x="620" y="400" text-anchor="middle">40s</text>
+
+<!-- pingTask (every 3s) -->
+<text class="th" x="30" y="85" text-anchor="end">pingTask</text>
+<text class="ts" x="30" y="100" text-anchor="end">3s period</text>
+
+<!-- Ping task executions -->
+<g class="c-blue">
+<rect x="60" y="70" width="40" height="35" rx="4" stroke-width="0.5"/>
+<rect x="116" y="70" width="40" height="35" rx="4" stroke-width="0.5"/>
+<rect x="172" y="70" width="40" height="35" rx="4" stroke-width="0.5"/>
+<rect x="228" y="70" width="40" height="35" rx="4" stroke-width="0.5"/>
+<rect x="284" y="70" width="40" height="35" rx="4" stroke-width="0.5"/>
+<rect x="340" y="70" width="40" height="35" rx="4" stroke-width="0.5"/>
+<rect x="396" y="70" width="40" height="35" rx="4" stroke-width="0.5"/>
+<rect x="452" y="70" width="40" height="35" rx="4" stroke-width="0.5"/>
+<rect x="508" y="70" width="40" height="35" rx="4" stroke-width="0.5"/>
+<rect x="564" y="70" width="40" height="35" rx="4" stroke-width="0.5"/>
+</g>
+
+<!-- CompTask (every 3s) -->
+<text class="th" x="30" y="165" text-anchor="end">CompTask</text>
+<text class="ts" x="30" y="180" text-anchor="end">3s period</text>
+
+<!-- Compass task executions -->
+<g class="c-teal">
+<rect x="60" y="150" width="40" height="35" rx="4" stroke-width="0.5"/>
+<rect x="116" y="150" width="40" height="35" rx="4" stroke-width="0.5"/>
+<rect x="172" y="150" width="40" height="35" rx="4" stroke-width="0.5"/>
+<rect x="228" y="150" width="40" height="35" rx="4" stroke-width="0.5"/>
+<rect x="284" y="150" width="40" height="35" rx="4" stroke-width="0.5"/>
+<rect x="340" y="150" width="40" height="35" rx="4" stroke-width="0.5"/>
+<rect x="396" y="150" width="40" height="35" rx="4" stroke-width="0.5"/>
+<rect x="452" y="150" width="40" height="35" rx="4" stroke-width="0.5"/>
+<rect x="508" y="150" width="40" height="35" rx="4" stroke-width="0.5"/>
+<rect x="564" y="150" width="40" height="35" rx="4" stroke-width="0.5"/>
+</g>
+
+<!-- ThingSpeak task (every 30s) -->
+<text class="th" x="30" y="245" text-anchor="end">ThingSpeak</text>
+<text class="ts" x="30" y="260" text-anchor="end">30s period</text>
+
+<!-- ThingSpeak executions -->
+<g class="c-amber">
+<rect x="60" y="230" width="80" height="35" rx="4" stroke-width="0.5"/>
+<rect x="508" y="230" width="80" height="35" rx="4" stroke-width="0.5"/>
+</g>
+
+<!-- Semaphore protection indicator -->
+<text class="th" x="30" y="325" text-anchor="end">Semaphore</text>
+<text class="ts" x="30" y="340" text-anchor="end">Lock/Unlock</text>
+
+<!-- Semaphore lock periods (small marks) -->
+<g class="c-coral">
+<rect x="60" y="310" width="8" height="35" rx="2" stroke-width="0.5"/>
+<rect x="116" y="310" width="8" height="35" rx="2" stroke-width="0.5"/>
+<rect x="172" y="310" width="8" height="35" rx="2" stroke-width="0.5"/>
+<rect x="228" y="310" width="8" height="35" rx="2" stroke-width="0.5"/>
+<rect x="284" y="310" width="8" height="35" rx="2" stroke-width="0.5"/>
+<rect x="340" y="310" width="8" height="35" rx="2" stroke-width="0.5"/>
+<rect x="396" y="310" width="8" height="35" rx="2" stroke-width="0.5"/>
+<rect x="452" y="310" width="8" height="35" rx="2" stroke-width="0.5"/>
+<rect x="508" y="310" width="8" height="35" rx="2" stroke-width="0.5"/>
+<rect x="564" y="310" width="8" height="35" rx="2" stroke-width="0.5"/>
+</g>
+
+<!-- Annotation -->
+<line class="leader" x1="100" y1="107" x2="100" y2="148"/>
+<text class="ts" x="105" y="130" text-anchor="start">Tasks run concurrently</text>
+
+</svg>

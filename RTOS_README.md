@@ -16,8 +16,6 @@
 ![System Dashboard](docs/images/thingspeak_dashboard.png)
 *Real-time visualization of ping latency and compass orientation on ThingSpeak*
 
-**[🎥 Watch Demo Video](https://youtube.com/link)** ← See the system in action
-
 ---
 
 ## 🎯 What Does It Do?

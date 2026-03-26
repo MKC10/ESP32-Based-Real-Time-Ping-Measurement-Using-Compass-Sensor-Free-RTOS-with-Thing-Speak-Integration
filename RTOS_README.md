@@ -650,12 +650,12 @@ MIT License - See [LICENSE](LICENSE) file
 
 ## 👤 Author
 
-**[Your Name]**
+**[Krishna Chandrahaasa Madiraju]**
 - 🎓 Electrical/Computer Engineering Student @ UAB
 - 💼 Interested in: Embedded Systems, RTOS, IoT, Firmware Development
-- 🔗 GitHub: [@yourusername](https://github.com/yourusername)
+- 🔗 GitHub: [@MKC10]https://github.com/MKC10/
 - 💼 LinkedIn: [linkedin.com/in/yourname](https://linkedin.com/in/yourname)
-- 📧 Email: your.email@uab.edu
+- 📧 Email: kmadiraj@uab.edu
 
 ---
 
@@ -664,12 +664,8 @@ MIT License - See [LICENSE](LICENSE) file
 - **FreeRTOS**: Richard Barry and the FreeRTOS team for the RTOS kernel
 - **Espressif**: ESP32 Arduino core and comprehensive documentation
 - **MathWorks**: ThingSpeak IoT platform
-- **Course Instructor**: [Instructor Name] for teaching Real-Time Systems concepts
+- **Course Instructor**: Nuria Vendra Llopis for teaching Real-Time Systems concepts
 - **Open Source Community**: Library maintainers and contributors
-
----
-
-## 📚 References & Resources
 
 ### FreeRTOS Documentation
 - [FreeRTOS API Reference](https://www.freertos.org/a00106.html)
@@ -683,21 +679,7 @@ MIT License - See [LICENSE](LICENSE) file
 - [ESP32 FreeRTOS Examples](https://github.com/espressif/esp-idf/tree/master/examples/system/freertos)
 - [ThingSpeak Projects](https://thingspeak.com/projects)
 
----
 
-## 📊 Citation
-
-```bibtex
-@misc{yourname2026rtos,
-  title={FreeRTOS-Based Real-Time Ping and Orientation Measurement System},
-  author={Your Name},
-  year={2026},
-  publisher={GitHub},
-  note={Real-time network monitoring with compass orientation tracking}
-}
-```
-
----
 
 ## ⭐ Star This Project
 

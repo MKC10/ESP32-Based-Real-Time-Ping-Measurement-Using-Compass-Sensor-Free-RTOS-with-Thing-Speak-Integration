@@ -6,9 +6,9 @@ git init
 ### **Step 3: Set Up Folders**
 ```
 your-repo/
-├── README.md              ← Rename RTOS_README.md
+├── RTOS_README.md              ← Rename RTOS_README.md
 ├── src/
-│   └── main.ino          ← Your Arduino code
+│   └── pingdetectionusing rtos.ino          ← Your Arduino code
 └── docs/
     ├── DIAGRAM_GUIDE.md
     ├── hardware/

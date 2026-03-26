@@ -1,0 +1,20 @@
+mkdir esp32-rtos-ping-compass
+cd esp32-rtos-ping-compass
+git init
+```
+
+### **Step 3: Set Up Folders**
+```
+your-repo/
+├── README.md              ← Rename RTOS_README.md
+├── src/
+│   └── main.ino          ← Your Arduino code
+└── docs/
+    ├── DIAGRAM_GUIDE.md
+    ├── hardware/
+    │   └── circuit_wiring_diagram.svg
+    └── images/
+        ├── system_architecture.svg
+        ├── task_architecture.svg
+        ├── data_flow.svg
+        └── task_timing.svg
